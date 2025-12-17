@@ -1,0 +1,100 @@
+Pin Number,Pin ID,Custom Name,Function,Direction,Latch,Open Drain,PIO Interrupt,Pull Up,Pull Down,Glitch/Debounce Filter,Slew Rate Control
+1,PC20,Alarm_LED,GPIO,Out,Low,No,Disabled,No,No,Glitch Filter,0x0
+2,PC21,Power_LED,GPIO,Out,Low,No,Disabled,No,No,Glitch Filter,0x0
+3,PC22,,Available,In,,,,,,,
+4,PD0,,Available,In,,,,,,,
+5,PA8,,Available,In,,,,,,,
+6,PA9,,Available,In,,,,,,,
+7,PD3,,Available,In,,,,,,,
+20,PD16,,Available,In,,,,,,,
+22,PD17,,Available,In,,,,,,,
+23,PD18,,Available,In,,,,,,,
+24,PD19,,Available,In,,,,,,,
+25,PA10,Pulse_Input,GPIO,In,n/a,No,Raising Edge,No,No,Glitch Filter,0x0
+26,PA11,Pulse_Output,GPIO,Out,Low,No,Disabled,No,No,Glitch Filter,0x0
+27,PA2,,Available,In,,,,,,,
+28,PA3,,Available,In,,,,,,,
+29,PA4,DLMS_RS485_TX,FLEXCOM0_IO0,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+30,PA5,DLMS_RS485_RX,FLEXCOM0_IO1,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+31,PA6,,Available,In,,,,,,,
+32,PA7,,Available,In,,,,,,,
+33,PA16,Debug_UART_TX,FLEXCOM3_IO0,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+34,PA17,Debug_UART_RX,FLEXCOM3_IO1,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+35,PA18,PLC_GPIO_PA18,GPIO,In,n/a,No,Disabled,No,No,Glitch Filter,0x0
+36,PA19,PLC_GPIO_PA19,GPIO,In,n/a,No,Disabled,No,No,Glitch Filter,0x0
+37,PA12,PLC_GPIO_PA12,GPIO,In,n/a,No,Disabled,No,No,Glitch Filter,0x0
+38,PA13,PLC_GPIO_PA13,GPIO,In,n/a,No,Disabled,No,No,Glitch Filter,0x0
+39,PA14,,Available,In,,,,,,,
+40,PA15,Select_Btn,GPIO,In,n/a,No,Falling Edge,No,No,Disabled,0x0
+42,PD1,DLMS_OPTICAL_RX,UART_URXD,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+43,PD2,DLMS_OPTICAL_TX,UART_UTXD,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+44,PD12,,Available,In,,,,,,,
+45,PD13,,Available,In,,,,,,,
+46,PA20,,Available,In,,,,,,,
+63,PA21,COM1,SLCDC_COM0,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+64,PA22,COM2,SLCDC_COM1,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+65,PA23,COM3,SLCDC_COM2,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+66,PA24,COM4,SLCDC_COM3,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+67,PA25,COM5,SLCDC_COM4,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+68,PA26,COM6,SLCDC_COM5,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+69,PA27,COM7,SLCDC_COM6,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+70,PA28,COM8,SLCDC_COM7,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+71,PA29,Bat_Level_Det_AD0,ACC_AD0/INP0/XIN,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+72,PA30,Bat_Level_Ctrl,GPIO,Out,High,No,Disabled,No,No,Glitch Filter,0x0
+74,PB1,Supply_Monitor,GPIO,In,n/a,No,Falling Edge,No,No,Glitch Filter,0x0
+75,PB0,,Available,In,,,,,,,
+76,PB2,,Available,In,,,,,,,
+77,PA31,,Available,In,,,,,,,
+81,PB3,SEG14,SLCDC_SEG6,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+82,PB4,SEG13,SLCDC_SEG7,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+83,PB5,SEG12,SLCDC_SEG8,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+84,PB6,SEG11,SLCDC_SEG9,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+85,PB7,SEG10,SLCDC_SEG10,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+86,PB8,SEG9,SLCDC_SEG11,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+87,PB9,SEG8,SLCDC_SEG12,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+88,PB10,,Available,In,,,,,,,
+89,PB11,SEG7,SLCDC_SEG14,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+90,PB12,SEG16,SLCDC_SEG15,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+91,PB13,SEG6,SLCDC_SEG16,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+92,PB14,SEG17,SLCDC_SEG17,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+93,PB15,SEG5,SLCDC_SEG18,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+94,PB16,SEG18,SLCDC_SEG19,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+95,PB17,SEG4,SLCDC_SEG20,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+96,PB18,SEG19,SLCDC_SEG21,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+97,PB19,SEG15,SLCDC_SEG22,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+98,PB20,SEG3,SLCDC_SEG23,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+100,PB22,LCD_Backlight,GPIO,Out,High,No,Disabled,No,No,Glitch Filter,0x0
+101,PB23,SEG2,SLCDC_SEG26,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+102,PB24,SEG1,SLCDC_SEG27,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+103,PB25,Relay_OnOff,GPIO,Out,Low,No,Disabled,No,No,Glitch Filter,0x0
+104,PB26,Relay_Enable,GPIO,Out,Low,No,Disabled,No,No,Glitch Filter,0x0
+105,PC0,,Available,In,,,,,,,
+106,PC1,,Available,In,,,,,,,
+109,PC2,,Available,In,,,,,,,
+110,PC3,,Available,In,,,,,,,
+112,PC5,,Available,In,,,,,,,
+113,PC6,,Available,In,,,,,,,
+114,PC7,,Available,In,,,,,,,
+115,PC8,,Available,In,,,,,,,
+116,PC9,,Available,In,,,,,,,
+118,PC10,,QSPI_QIO3,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+119,PC11,,QSPI_QIO2,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+121,PC12,,QSPI_QIO1,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+122,PC13,,QSPI_QIO0,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+123,PC14,,QSPI_QCS,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+124,PC15,,QSPI_QSCK,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+125,PC16,DLMS_LTE_TX,FLEXCOM6_IO0,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+126,PC17,DLMS_LTE_RX,FLEXCOM6_IO1,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+127,PC18,LTE_PWR_ON,GPIO,Out,Low,No,Disabled,No,No,Glitch Filter,0x0
+128,PC19,LTE_RST,GPIO,Out,Low,No,Disabled,No,No,Glitch Filter,0x0
+129,PD20,,Available,In,,,,,,,
+130,PD21,,Available,In,,,,,,,
+131,PD22,,Available,In,,,,,,,
+132,PD23,,Available,In,,,,,,,
+133,PD24,,Available,In,,,,,,,
+134,PD25,,Available,In,,,,,,,
+135,PD26,,Available,In,,,,,,,
+136,PD27,,Available,In,,,,,,,
+137,PD28,,Available,In,,,,,,,
+138,PD29,,Available,In,,,,,,,
+139,PD30,,Available,In,,,,,,,

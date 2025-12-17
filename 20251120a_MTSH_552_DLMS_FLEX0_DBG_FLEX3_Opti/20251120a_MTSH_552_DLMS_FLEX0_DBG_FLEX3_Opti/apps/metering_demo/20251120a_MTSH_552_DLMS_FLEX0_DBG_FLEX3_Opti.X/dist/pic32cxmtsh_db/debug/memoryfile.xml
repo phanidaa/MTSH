@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/pic32cxmtsh_db/debug/20251120a_MTSH_552_DLMS_FLEX0_DBG_FLEX3_Opti.X.debug.elf">
+    <memory name="program">
+      <units>bytes</units>
+      <length>1048576</length>
+      <used>439663</used>
+      <free>608913</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>524288</length>
+      <used>60813</used>
+      <free>463475</free>
+    </memory>
+  </executable>
+</project>

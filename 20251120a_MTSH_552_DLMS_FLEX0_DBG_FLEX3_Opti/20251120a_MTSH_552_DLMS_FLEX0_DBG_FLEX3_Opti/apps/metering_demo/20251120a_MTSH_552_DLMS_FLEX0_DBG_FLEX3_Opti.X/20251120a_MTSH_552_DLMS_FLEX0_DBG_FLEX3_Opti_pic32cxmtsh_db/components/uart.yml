@@ -1,0 +1,52 @@
+configVersion: 1.0.0
+componentName: uart
+coreVersion: 5.8.3
+device: PIC32CX2051MTSH128
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: uart
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: uart
+          x: '24'
+          y: '59'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    BAUD_RATE:
+      attributes:
+        id: BAUD_RATE
+      children:
+      - children:
+        - attributes:
+            value: '9600'
+          type: User
+        type: Values
+      type: Integer
+    BRG_VALUE:
+      attributes:
+        id: BRG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: uart
+            value: '773'
+          type: Dynamic
+        type: Values
+      type: Integer
+  userData: {}

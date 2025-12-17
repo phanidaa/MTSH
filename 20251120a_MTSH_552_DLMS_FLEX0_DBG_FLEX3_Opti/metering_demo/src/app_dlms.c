@@ -1,0 +1,159 @@
+/*******************************************************************************
+  MPLAB Harmony Application Source File
+
+  Company:
+    Microchip Technology Inc.
+
+  File Name:
+    app_dlms.c
+
+  Summary:
+    This file contains the source code for the MPLAB Harmony application.
+
+  Description:
+    This file contains the source code for the MPLAB Harmony application.  It
+    implements the logic of the application's state machine and it may call
+    API routines of other MPLAB Harmony modules in the system, such as drivers,
+    system services, and middleware.  However, it does not call any of the
+    system interfaces (such as the "Initialize" and "Tasks" functions) of any of
+    the modules in the system or make any assumptions about when those functions
+    are called.  That is the responsibility of the configuration-specific system
+    files.
+ *******************************************************************************/
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Included Files
+// *****************************************************************************
+// *****************************************************************************
+
+#include "app_dlms.h"
+#include "definitions.h"
+
+#include "app_gurux_dlms_process.h"
+#include "app_gurux_uart_handdle.h"
+// *****************************************************************************
+// *****************************************************************************
+// Section: Global Data Definitions
+// *****************************************************************************
+// *****************************************************************************
+
+// *****************************************************************************
+/* Application Data
+
+  Summary:
+    Holds application data
+
+  Description:
+    This structure holds the application's data.
+
+  Remarks:
+    This structure should be initialized by the APP_DLMS_Initialize function.
+
+    Application strings and buffers are be defined outside this structure.
+*/
+
+APP_DLMS_DATA app_dlmsData;
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Application Callback Functions
+// *****************************************************************************
+// *****************************************************************************
+
+/* TODO:  Add any necessary callback functions.
+*/
+void _APP_DLMS_UART_ReadCallback(uintptr_t context)
+{
+    process_dlms_rec_data();
+	dlms_set_read_buffer();
+}
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Application Local Functions
+// *****************************************************************************
+// *****************************************************************************
+
+
+/* TODO:  Add any necessary local functions.
+*/
+
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Application Initialization and State Machine Functions
+// *****************************************************************************
+// *****************************************************************************
+
+/*******************************************************************************
+  Function:
+    void APP_DLMS_Initialize ( void )
+
+  Remarks:
+    See prototype in app_dlms.h.
+ */
+
+void APP_DLMS_Initialize ( void )
+{
+    /* Place the App state machine in its initial state. */
+    app_dlmsData.state = APP_DLMS_STATE_INIT;
+
+    FLEXCOM0_USART_ReadCallbackRegister(_APP_DLMS_UART_ReadCallback, 0);
+    FLEXCOM0_USART_Read(&app_dlmsData.dlms_uart_rx_byte,1 );
+    
+    FLEXCOM0_USART_Write("DLMS UART OK\r\n", sizeof ("DLMS UART OK\r\n")); 
+
+
+    /* TODO: Initialize your application's state machine and other
+     * parameters.
+     */
+}
+
+
+/******************************************************************************
+  Function:
+    void APP_DLMS_Tasks ( void )
+
+  Remarks:
+    See prototype in app_dlms.h.
+ */
+
+ void APP_DLMS_Tasks ( void )
+{
+
+    /* Check the application's current state. */
+    switch ( app_dlmsData.state )
+    {
+        /* Application's initial state. */
+        case APP_DLMS_STATE_INIT:
+        {
+            bool appInitialized = true;
+            if (appInitialized)
+            {
+                app_dlmsData.state = APP_DLMS_STATE_SERVICE_TASKS;
+                
+                init_dlms_process();
+            }
+            break;
+        }
+
+        case APP_DLMS_STATE_SERVICE_TASKS:
+        {
+            void dlms_usart_task(void);
+            dlms_usart_task();
+            break;
+        }
+        /* The default state should never be executed. */
+        default:
+        {
+            /* TODO: Handle error in application's state machine. */
+            break;
+        }
+    }
+}
+
+
+/*******************************************************************************
+ End of File
+ */
